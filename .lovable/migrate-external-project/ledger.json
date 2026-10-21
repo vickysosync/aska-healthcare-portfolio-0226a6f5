@@ -1,0 +1,18 @@
+{
+  "source": "github:https://github.com/vickysosync/aska-healthcare-portfolio-aaff72a6",
+  "capabilities": [
+    {"capability":"application code, routes, and bundled image assets","source":"GitHub repository","outcome":"migrate","status":"pending","next_action":"Copy the existing app into this project while preserving Lovable's TanStack Start setup."},
+    {"capability":"database schema","source":"none detected; app uses browser localStorage","outcome":"not_applicable","status":"verified","next_action":"None."},
+    {"capability":"application records","source":"illustrative demo data bundled in source; visitor edits are browser-local","outcome":"migrate","status":"pending","next_action":"Preserve bundled demo records and localStorage behavior; no server export is present."},
+    {"capability":"authentication identities","source":"frontend-only demo login","outcome":"not_applicable","status":"verified","next_action":"Keep the explicitly demo-only credentials and warning; do not represent as secure auth."},
+    {"capability":"authorization and access boundaries","source":"frontend-only demo session state","outcome":"migrate","status":"pending","next_action":"Preserve demo-only behavior and verify protected admin navigation; do not claim production security."},
+    {"capability":"uploaded file bytes","source":"none detected","outcome":"not_applicable","status":"verified","next_action":"None."},
+    {"capability":"external providers and integrations","source":"none detected","outcome":"not_applicable","status":"verified","next_action":"None."},
+    {"capability":"public endpoints and external callers","source":"none detected","outcome":"not_applicable","status":"verified","next_action":"None."},
+    {"capability":"callbacks and webhooks","source":"none detected","outcome":"not_applicable","status":"verified","next_action":"None."},
+    {"capability":"schedules and background jobs","source":"none detected","outcome":"not_applicable","status":"verified","next_action":"None."},
+    {"capability":"secrets and environment configuration","source":"none detected","outcome":"not_applicable","status":"verified","next_action":"None."},
+    {"capability":"deployment cutover","source":"static hosting guide in repository","outcome":"migrate","status":"pending","next_action":"Preserve publishing instructions; deployment itself is not requested."},
+    {"capability":"functional verification","source":"repository app and tests","outcome":"verify","status":"pending","next_action":"Run project tests and check the preview's public and admin paths after migration."}
+  ]
+}
