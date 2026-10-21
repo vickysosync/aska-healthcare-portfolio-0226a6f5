@@ -1,7 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
-import { Hero, WhySection } from "@/components/site/Sections";
+import {
+  AboutSection,
+  ApproachSection,
+  ContactSection,
+  GallerySection,
+  Hero,
+  HospitalSection,
+  ProductsSection,
+  ServicesSection,
+  WhySection,
+} from "@/components/site/Sections";
 import { useSite } from "@/data/content";
 
 const TITLE = "ASKA Healthcare Private Limited | Healthcare & Pharmaceutical Portfolio";
@@ -30,7 +40,14 @@ function Home() {
       <Header />
       <main id="main">
         <Hero />
+        {s.about && <AboutSection />}
+        {s.services && <ServicesSection />}
+        {s.products && <ProductsSection />}
+        {s.hospital && <HospitalSection />}
         {s.why && <WhySection />}
+        {s.approach && <ApproachSection />}
+        {s.gallery && <GallerySection />}
+        {s.contact && <ContactSection />}
       </main>
       <Footer />
     </>
