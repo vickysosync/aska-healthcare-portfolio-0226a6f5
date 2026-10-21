@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep this application on TanStack Start with file-based routing; ASKA public-site and admin modules follow that router to preserve the existing project's runtime.

@@ -1,0 +1,3 @@
+- [ ] Copy the supplied ASKA repository's application, assets, and publishing notes into this existing Lovable project.
+- [ ] Keep this project's TanStack Start setup and ensure the imported routes and metadata work correctly.
+- [ ] Run the available tests and verify the public site and admin login in the preview.
