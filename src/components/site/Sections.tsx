@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero.jpg";
 import aboutImg from "@/assets/about.jpg";
 import { Badge, Icon, Modal, SectionHeading, SmartImage } from "@/components/ui-kit";
@@ -19,8 +20,8 @@ export function Hero() {
           <h1 className="mt-5 text-4xl font-semibold leading-[1.08] md:text-5xl lg:text-6xl">{site.heroHeading}</h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-primary-foreground/80 md:text-lg">{site.heroText}</p>
           <div className="mt-9 flex flex-wrap gap-3">
-            <a href="#services" className="btn btn-teal">{site.ctaPrimary}<Icon.Arrow width={16} height={16} /></a>
-            <a href="#contact" className="btn btn-ghost-light">{site.ctaSecondary}</a>
+            <Link to="/services" className="btn btn-teal">{site.ctaPrimary}<Icon.Arrow width={16} height={16} /></Link>
+            <Link to="/contact" className="btn btn-ghost-light">{site.ctaSecondary}</Link>
           </div>
           <div className="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-primary-foreground/15 pt-6 text-sm">
             {["Human Healthcare", "Pharmaceuticals", "Hospital Activities"].map((t) => (
@@ -130,7 +131,7 @@ export function ServicesSection() {
           <Badge>{sel.category}</Badge>
           <p className="mt-4 leading-relaxed text-foreground">{sel.description}</p>
           <p className="mt-3 leading-relaxed text-muted-foreground">{sel.details}</p>
-          <a href="#contact" onClick={() => setSel(null)} className="btn btn-teal mt-6">Enquire about this</a>
+          <Link to="/contact" onClick={() => setSel(null)} className="btn btn-teal mt-6">Enquire about this</Link>
         </>}
       </Modal>
     </section>
@@ -189,7 +190,7 @@ export function ProductsSection() {
           <div className="mt-4 flex flex-wrap gap-2"><Badge>{sel.category}</Badge><Badge tone="blue">{sel.status}</Badge><Badge tone="muted">{sel.availability}</Badge></div>
           <p className="mt-4 leading-relaxed text-foreground">{sel.description}</p>
           <p className="mt-4 text-xs text-muted-foreground">This is an illustrative entry. Please contact the company to verify availability and details.</p>
-          <a href="#contact" onClick={() => setSel(null)} className="btn btn-teal mt-6">Enquire about this product</a>
+          <Link to="/contact" onClick={() => setSel(null)} className="btn btn-teal mt-6">Enquire about this product</Link>
         </>}
       </Modal>
     </section>
@@ -216,7 +217,7 @@ export function HospitalSection() {
             </article>
           ))}
         </div>
-        <a href="#contact" className="btn btn-teal mt-10">Discuss a Healthcare Requirement<Icon.Arrow width={16} height={16} /></a>
+        <Link to="/contact" className="btn btn-teal mt-10">Discuss a Healthcare Requirement<Icon.Arrow width={16} height={16} /></Link>
       </div>
     </section>
   );

@@ -10,6 +10,15 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as ProductsRouteImport } from './routes/products'
+import { Route as HospitalActivitiesRouteImport } from './routes/hospital-activities'
+import { Route as HospitalRouteImport } from './routes/hospital'
+import { Route as ApproachRouteImport } from './routes/approach'
+import { Route as OurApproachRouteImport } from './routes/our-approach'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as AdminRouteImport } from './routes/admin'
 import { Route as AdminIndexRouteImport } from './routes/admin.index'
 import { Route as AdminAboutRouteImport } from './routes/admin.about'
@@ -27,6 +36,51 @@ import { Route as AdminLoginRouteImport } from './routes/admin_.login'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsRoute = ProductsRouteImport.update({
+  id: '/products',
+  path: '/products',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HospitalActivitiesRoute = HospitalActivitiesRouteImport.update({
+  id: '/hospital-activities',
+  path: '/hospital-activities',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HospitalRoute = HospitalRouteImport.update({
+  id: '/hospital',
+  path: '/hospital',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApproachRoute = ApproachRouteImport.update({
+  id: '/approach',
+  path: '/approach',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurApproachRoute = OurApproachRouteImport.update({
+  id: '/our-approach',
+  path: '/our-approach',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminRoute = AdminRouteImport.update({
@@ -97,6 +151,15 @@ const AdminLoginRoute = AdminLoginRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/services': typeof ServicesRoute
+  '/products': typeof ProductsRoute
+  '/hospital-activities': typeof HospitalActivitiesRoute
+  '/hospital': typeof HospitalRoute
+  '/approach': typeof ApproachRoute
+  '/our-approach': typeof OurApproachRoute
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
   '/admin': typeof AdminRouteWithChildren
   '/admin/about': typeof AdminAboutRoute
   '/admin/contact-settings': typeof AdminContactSettingsRoute
@@ -113,6 +176,15 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/services': typeof ServicesRoute
+  '/products': typeof ProductsRoute
+  '/hospital-activities': typeof HospitalActivitiesRoute
+  '/hospital': typeof HospitalRoute
+  '/approach': typeof ApproachRoute
+  '/our-approach': typeof OurApproachRoute
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
   '/admin/about': typeof AdminAboutRoute
   '/admin/contact-settings': typeof AdminContactSettingsRoute
   '/admin/dashboard': typeof AdminDashboardRoute
@@ -129,6 +201,15 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/services': typeof ServicesRoute
+  '/products': typeof ProductsRoute
+  '/hospital-activities': typeof HospitalActivitiesRoute
+  '/hospital': typeof HospitalRoute
+  '/approach': typeof ApproachRoute
+  '/our-approach': typeof OurApproachRoute
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
   '/admin': typeof AdminRouteWithChildren
   '/admin/about': typeof AdminAboutRoute
   '/admin/contact-settings': typeof AdminContactSettingsRoute
@@ -147,6 +228,15 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
+    | '/services'
+    | '/products'
+    | '/hospital-activities'
+    | '/hospital'
+    | '/approach'
+    | '/our-approach'
+    | '/contact'
+    | '/gallery'
     | '/admin'
     | '/admin/about'
     | '/admin/contact-settings'
@@ -163,6 +253,15 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
+    | '/services'
+    | '/products'
+    | '/hospital-activities'
+    | '/hospital'
+    | '/approach'
+    | '/our-approach'
+    | '/contact'
+    | '/gallery'
     | '/admin/about'
     | '/admin/contact-settings'
     | '/admin/dashboard'
@@ -178,6 +277,15 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/about'
+    | '/services'
+    | '/products'
+    | '/hospital-activities'
+    | '/hospital'
+    | '/approach'
+    | '/our-approach'
+    | '/contact'
+    | '/gallery'
     | '/admin'
     | '/admin/about'
     | '/admin/contact-settings'
@@ -195,6 +303,15 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ServicesRoute: typeof ServicesRoute
+  ProductsRoute: typeof ProductsRoute
+  HospitalActivitiesRoute: typeof HospitalActivitiesRoute
+  HospitalRoute: typeof HospitalRoute
+  ApproachRoute: typeof ApproachRoute
+  OurApproachRoute: typeof OurApproachRoute
+  ContactRoute: typeof ContactRoute
+  GalleryRoute: typeof GalleryRoute
   AdminRoute: typeof AdminRouteWithChildren
   AdminLoginRoute: typeof AdminLoginRoute
 }
@@ -206,6 +323,69 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products': {
+      id: '/products'
+      path: '/products'
+      fullPath: '/products'
+      preLoaderRoute: typeof ProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hospital-activities': {
+      id: '/hospital-activities'
+      path: '/hospital-activities'
+      fullPath: '/hospital-activities'
+      preLoaderRoute: typeof HospitalActivitiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hospital': {
+      id: '/hospital'
+      path: '/hospital'
+      fullPath: '/hospital'
+      preLoaderRoute: typeof HospitalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/approach': {
+      id: '/approach'
+      path: '/approach'
+      fullPath: '/approach'
+      preLoaderRoute: typeof ApproachRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-approach': {
+      id: '/our-approach'
+      path: '/our-approach'
+      fullPath: '/our-approach'
+      preLoaderRoute: typeof OurApproachRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin': {
@@ -334,6 +514,15 @@ const AdminRouteWithChildren = AdminRoute._addFileChildren(AdminRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ServicesRoute: ServicesRoute,
+  ProductsRoute: ProductsRoute,
+  HospitalActivitiesRoute: HospitalActivitiesRoute,
+  HospitalRoute: HospitalRoute,
+  ApproachRoute: ApproachRoute,
+  OurApproachRoute: OurApproachRoute,
+  ContactRoute: ContactRoute,
+  GalleryRoute: GalleryRoute,
   AdminRoute: AdminRouteWithChildren,
   AdminLoginRoute: AdminLoginRoute,
 }
